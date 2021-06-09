@@ -1,0 +1,49 @@
+.container{
+    font-family: fantasy;
+    font-size: 36px;
+    background-color: #05364d;
+    text-align: center;
+    color: white;
+}
+input{
+width: auto;
+text-align: center;
+color:white;
+background-color: #05364d;
+border-color: white solid;
+}
+h1:hover{
+   color: brown;
+   font-size: 150%;
+}
+@media screen and (max-width: 640px){
+    
+
+
+    html,
+  body,
+  header,
+   
+    .container{
+        font-family: fantasy;
+    font-size: 16px;
+    background-color: #05364d;
+    text-align: center;
+    color: white;
+
+overflow-x: hidden;
+
+    }
+input{
+    width:75%;
+}
+#t{
+    font-size: 18px;
+}
+.btn{
+    width: 150px!important;
+    font-size: 12px;
+}
+    
+
+}

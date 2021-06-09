@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/bootstrap-cerulean.min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <title>Table Multiplication</title>
+    <script type="text/javascript">
+		 
+		function table_multiplication(nombre)
+		{
+
+		var i;
+        nombre = Number(document.getElementById("nbr1").value);
+        if(nombre<0){
+            // alert('impossible de calculer avec des nombres négatif');
+            // document.getElementById('resu').innerHTML="Veillez essayer avec les nombres positif";
+
+          
+           HTMLSelectElement.getElementById('cal').disabled=true;
+          
+        }
+        else{
+
+        
+		for (i=1; i<=10; i++) {
+		    resultat=nombre*i;
+            document.getElementById('resu').innerHTML+=nombre+" x "+i+"="+(nombre*i)+"<br>";
+			        }
+                }
+		}	
+       
+        table_multiplication();	
+        function diminuer(){
+            var valeur=document.getElementById('nbr1').value;
+            valeur--;
+            document.getElementById('nbr1').value=valeur;
+            document.getElementById('resu').innerHTML='';
+            if(valeur<0){
+                document.getElementById('cal').disabled=true;
+            }
+        }		  
+        function augmenter(){
+            var valeur=document.getElementById('nbr1').value;
+            valeur++;
+            document.getElementById('nbr1').value=valeur;
+            document.getElementById('resu').innerHTML='';
+            if(valeur>=0){
+                document.getElementById('cal').disabled=false;
+            }
+        }		
+        
+        function effacer(){
+            document.getElementById('resu').innerHTML='';
+            document.getElementById('nbr1').value='';
+        }
+		
+		
+	</script>
+</head>
+<body>
+  <div class="container">
+      <center>
+     <h1 class="text-center pt-5" id="t"> TALBLE DE MULTIPLICATION</h1> <br>
+  
+  <button type="" onclick="diminuer()">-</button>  <input type="number" id="nbr1">  <button onclick="augmenter()">+</button> <br>
+  
+       <button class="btn btn-success"  onclick="table_multiplication()" value="Calculer" id="cal">Calculer</button>&nbsp;&nbsp;
+    
+    <button type="reset" onclick="effacer()" value="effacer" class="btn btn-danger">Effacer</button>
+ 
+        <div id="resu">
+
+        </div>
+    </center>
+    </div>
+</body>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+</html>
